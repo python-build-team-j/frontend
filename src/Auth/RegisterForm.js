@@ -31,7 +31,9 @@ const RegisterForm = () => {
         console.log(res);
         //res.data.key
       })
-      .catch(() => {});
+      .catch(err => {
+        alert(err);
+      });
 
     setFormState({
       email: "",

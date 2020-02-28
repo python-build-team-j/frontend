@@ -27,7 +27,9 @@ const LoginForm = () => {
         console.log(res);
         //res.data.key
       })
-      .catch(() => {});
+      .catch(err => {
+        alert(err);
+      });
 
     setFormState({ username: "", password: "" });
   };
