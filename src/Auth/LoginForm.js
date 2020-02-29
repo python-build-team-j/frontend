@@ -24,8 +24,8 @@ const LoginForm = () => {
         password
       })
       .then(res => {
-        console.log(res);
-        //res.data.key
+        console.log(res.data.key);
+        localStorage.setItem("key", res.data.key);
       })
       .catch(err => {
         alert(err);
