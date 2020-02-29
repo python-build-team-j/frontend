@@ -2,6 +2,7 @@ import React from "react";
 import RegisterForm from "./Auth/RegisterForm";
 import LoginForm from "./Auth/LoginForm";
 import NewGameButton from "./GamePlay/NewGameButton";
+import MoveButtons from "./GamePlay/Movement/MoveButtons";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <RegisterForm />
       <LoginForm />
       <NewGameButton />
+      <MoveButtons />
     </div>
   );
 }
