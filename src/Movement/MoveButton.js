@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 const MoveButton = props => {
   const movementHandler = event => {
-    console.log(props.direction);
     axios
       .get("https://lambda-mud-test.herokuapp.com/api/adv/init", {
         headers: {

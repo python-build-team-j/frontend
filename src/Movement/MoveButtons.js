@@ -3,12 +3,12 @@ import MoveButton from "./MoveButton";
 const MoveButtons = props => {
   return (
     <div>
-      <MoveButton direction="n" {...props} />
+      <MoveButton direction="n" />
       <div>
-        <MoveButton direction="w" {...props} />
-        <MoveButton direction="e" {...props} />
+        <MoveButton direction="w" />
+        <MoveButton direction="e" />
       </div>
-      <MoveButton direction="s" {...props} />
+      <MoveButton direction="s" />
     </div>
   );
 };
