@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-
+import { Row, Container, Col } from "reactstrap";
 import axios from "axios";
+import styled from "styled-components";
 
+const StyledCol = styled(Col)`
+  height: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  border: 1px solid red;
+`;
 const Map = props => {
   const [rooms, setRooms] = useState([]);
   const dummyData = [
@@ -55,6 +62,32 @@ const Map = props => {
         e_to: 0,
         w_to: 2
       }
+    },
+    {
+      model: "adventure.room",
+      pk: 3,
+      fields: {
+        title: "Grand Overlook",
+        description:
+          "A steep cliff appears before you, falling\ninto the darkness. Ahead to the north, a light flickers in\nthe distance, but there is no way across the chasm.",
+        n_to: 0,
+        s_to: 2,
+        e_to: 0,
+        w_to: 0
+      }
+    },
+    {
+      model: "adventure.room",
+      pk: 3,
+      fields: {
+        title: "Grand Overlook",
+        description:
+          "A steep cliff appears before you, falling\ninto the darkness. Ahead to the north, a light flickers in\nthe distance, but there is no way across the chasm.",
+        n_to: 0,
+        s_to: 2,
+        e_to: 0,
+        w_to: 0
+      }
     }
   ];
   useEffect(() => {
@@ -68,12 +101,14 @@ const Map = props => {
   }, []);
 
   return (
-    <div>
+    <Container>
       <button onClick={props.handleModal}>X</button>
-      {dummyData.map(room => {
-        return <div>{room.fields.title}</div>;
-      })}
-    </div>
+      <Row>
+        {dummyData.map(room => {
+          return <StyledCol>{room.fields.title}</StyledCol>;
+        })}
+      </Row>
+    </Container>
   );
 };
 

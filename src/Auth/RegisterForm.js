@@ -95,7 +95,9 @@ const RegisterForm = () => {
             required
           />
         </FormGroup>
-        <Button type="submit">Register</Button>
+        <Button primary type="submit">
+          Register
+        </Button>
       </Form>
     </FormContainer>
   );
