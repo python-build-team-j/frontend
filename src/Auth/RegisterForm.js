@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
 import axios from "axios";
+import styled from "styled-components";
+
+const FormContainer = styled.div`
+  width: 50%;
+  margin: 50px auto;
+  padding: 50px 5%;
+  background-color: lightgreen;
+  border: 5px solid green;
+  border-radius: 5px;
+`;
 
 const RegisterForm = () => {
   const [formState, setFormState] = useState({
@@ -44,51 +55,49 @@ const RegisterForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input
-            type="text"
-            name="username"
-            onChange={handleChanges}
-            value={formState.username}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
+    <FormContainer>
+      <Form onSubmit={handleSubmit}>
+        <Label>Username:</Label>
+        <Input
+          type="text"
+          name="username"
+          onChange={handleChanges}
+          value={formState.username}
+          required
+        />
+        <FormGroup>
+          <Label>Email:</Label>
+          <Input
             type="email"
             name="email"
             onChange={handleChanges}
             value={formState.email}
             required
           />
-        </label>
-        <label>
-          Password:
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label>Password:</Label>
+          <Input
             type="password"
             name="password1"
             onChange={handleChanges}
             value={formState.password1}
             required
           />
-        </label>
-        <label>
-          Password Confirmation:
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label>Password Confirmation:</Label>
+          <Input
             type="password"
             name="password2"
             onChange={handleChanges}
             value={formState.password2}
             required
           />
-        </label>
-        <button type="submit">Register</button>
-      </form>
-    </div>
+        </FormGroup>
+        <Button type="submit">Register</Button>
+      </Form>
+    </FormContainer>
   );
 };
 
