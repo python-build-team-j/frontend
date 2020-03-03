@@ -7,7 +7,9 @@ const StyledCol = styled(Col)`
   height: 150px;
   min-width: 150px;
   max-width: 150px;
-  border: 1px solid red;
+`;
+const CurrentRoom = styled(StyledCol)`
+  border: 5px solid red;
 `;
 const Map = props => {
   const [rooms, setRooms] = useState([]);
@@ -105,7 +107,12 @@ const Map = props => {
       <button onClick={props.handleModal}>X</button>
       <Row>
         {dummyData.map(room => {
-          return <StyledCol>{room.fields.title}</StyledCol>;
+          return (
+            // put a ternary operator that returns a different styled component if it is the current room
+            <StyledCol>
+              <p>{room.fields.title}</p>
+            </StyledCol>
+          );
         })}
       </Row>
     </Container>
