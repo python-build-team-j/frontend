@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
 import axios from "axios";
+import styled from "styled-components";
+
+const FormContainer = styled.div`
+  width: 50%;
+  margin: 50px auto;
+  padding: 50px 5%;
+  background-color: lightgreen;
+  border: 5px solid green;
+  border-radius: 5px;
+`;
 
 const LoginForm = () => {
   const [formState, setFormState] = useState({
@@ -24,8 +35,8 @@ const LoginForm = () => {
         password
       })
       .then(res => {
-        console.log(res);
-        //res.data.key
+        console.log(res.data.key);
+        localStorage.setItem("key", res.data.key);
       })
       .catch(err => {
         alert(err);
@@ -35,31 +46,31 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input
+    <FormContainer>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <Label for="username">Username:</Label>
+          <Input
             type="text"
             name="username"
             onChange={handleChanges}
             value={formState.username}
             required
           />
-        </label>
-        <label>
-          Password:
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label for="password">Password:</Label>
+          <Input
             type="password"
             name="password"
             onChange={handleChanges}
             value={formState.password}
             required
           />
-        </label>
-        <button type="submit">Login</button>
-      </form>
-    </div>
+        </FormGroup>
+        <Button type="submit">Login</Button>
+      </Form>
+    </FormContainer>
   );
 };
 
