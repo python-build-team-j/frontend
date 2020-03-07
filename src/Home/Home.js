@@ -106,10 +106,6 @@ const Home = () => {
       <p>
         What is MUD? Well, Its a Multi-User Dungeon (for those that arent as 'hip to the lingo') Within this app, we will be able to show you the accessibility and <b>wonders</b> that these Dungeons have to offer you. We have hidden a <i>Grand Wonder</i> within the game and we wish you the best of luck on finding it. With that, we say: Welcome to our MUD - Must Use Ducks.
       </p>
-      <div>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
-      </div>
       <ParticlesBg />
     </div>
   );

@@ -11,8 +11,7 @@ import Game from "./GameView/Game";
 import About from "./components/About";
 import Instructions from "./components/Instructions";
 
-import "./App.css";
-
+import '../src/App.scss'
 
 function App() {
   return (
@@ -21,6 +20,8 @@ function App() {
         <nav className='app-nav'>
           <Link to='/about'>About</Link>
           <Link to='/instructions'>How To Play</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
         </nav>
       </header>
       <Switch>
