@@ -27,10 +27,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/login'render={() => (
-          <LoginForm 
-            logInHandler={this.logInHandler}
-            history={this.props.history}
-          />
+          <LoginForm />
         )}
         />
         <Route path='/about' component={About} />

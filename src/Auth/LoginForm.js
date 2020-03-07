@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input} from "reactstrap";
 import axios from "axios";
 import styled from "styled-components";
 

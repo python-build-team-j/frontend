@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
+import React, { useState} from "react";
+import { Button, Form, FormGroup, Label, Input} from "reactstrap";
 import axios from "axios";
 import styled from "styled-components";
 
