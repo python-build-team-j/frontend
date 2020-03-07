@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
 import axios from "axios";
 import styled from "styled-components";
@@ -12,11 +13,13 @@ const FormContainer = styled.div`
   border-radius: 5px;
 `;
 
-const LoginForm = () => {
+const LoginForm = props => {
   const [formState, setFormState] = useState({
     username: "",
     password: ""
   });
+
+  let history = useHistory();
 
   const handleChanges = event => {
     setFormState({
@@ -37,12 +40,12 @@ const LoginForm = () => {
       .then(res => {
         console.log(res.data.key);
         localStorage.setItem("key", res.data.key);
+        setFormState({ username: "", password: "" });
+        history.push("/start");
       })
       .catch(err => {
         alert(err);
       });
-
-    setFormState({ username: "", password: "" });
   };
 
   return (
