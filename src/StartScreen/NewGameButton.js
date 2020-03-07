@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import axios from "axios";
 
 const NewGameButton = () => {
+  let history = useHistory();
   const clickHandler = () => {
     axios
       .get("https://lambda-mud-test.herokuapp.com/api/adv/init", {
@@ -19,6 +22,7 @@ const NewGameButton = () => {
             players: ["all the players listed here"]
           };
         */
+        history.push("/game");
       })
       .catch(err => alert(err));
   };
