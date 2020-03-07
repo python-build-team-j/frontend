@@ -11,7 +11,7 @@ const StyledButtonContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 3px solid green;
   div {
     background: grey;
     width: 95%;
@@ -27,12 +27,12 @@ const StyledButtonContainer = styled.div`
 const MoveButtons = props => {
   return (
     <StyledButtonContainer>
-      <MoveButton direction="n" />
+      <MoveButton direction="n" {...props} />
       <div>
-        <MoveButton direction="w" />
-        <MoveButton direction="e" />
+        <MoveButton direction="w" {...props} />
+        <MoveButton direction="e" {...props} />
       </div>
-      <MoveButton direction="s" />
+      <MoveButton direction="s" {...props} />
     </StyledButtonContainer>
   );
 };
