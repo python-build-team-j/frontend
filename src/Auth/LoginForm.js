@@ -8,8 +8,8 @@ const FormContainer = styled.div`
   width: 50%;
   margin: 50px auto;
   padding: 50px 5%;
-  background-color: lightgreen;
-  border: 5px solid green;
+  background-color: forestgreen;
+  border: 5px solid black;
   border-radius: 5px;
 `;
 
