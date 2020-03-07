@@ -10,11 +10,10 @@ const StyledGame = styled.div`
   justify-content: space-between;
   width: 100vw;
   height: 90vh;
-  div {
-    height: 10vh;
+  .controls {
+    padding: 10px 5%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-end;
   }
 `;
 const Game = () => {

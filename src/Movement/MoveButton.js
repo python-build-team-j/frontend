@@ -25,13 +25,13 @@ const MoveButton = props => {
 
   const directionButtonText =
     props.direction === "n" ? (
-      <span>🔼</span>
+      <span>👆</span>
     ) : props.direction === "s" ? (
-      <span>🔽</span>
+      <span>👇</span>
     ) : props.direction === "w" ? (
-      <span>◀</span>
+      <span>👈</span>
     ) : props.direction === "e" ? (
-      <span>▶</span>
+      <span>👉</span>
     ) : null;
 
   return <button onClick={movementHandler}>{directionButtonText}</button>;
