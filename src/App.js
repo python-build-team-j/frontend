@@ -32,6 +32,8 @@ function App() {
           />
         )}
         />
+        <Route path='/about' component={About} />
+        <Route path='/instructions' component={Instructions} />
         <Route path='/register' component={RegisterForm} />
         <Route path='/start' component={Start} />
         <Route path='/game' component={Game} />
