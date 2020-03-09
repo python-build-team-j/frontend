@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+.card {
+  background: #fff;
+  padding: 3rem 12rem;
+  line-height: 1.5;
+  border-radius: 1.5%;
+
+  p {
+  color: #555f77;
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  }
+}
+
+.card-title {
+  font-family: fantasy;
+  font-weight: 100;
+  color: #555f77;
+}
+
+.team-cont {
+  div {
+    .profile-avi {
+      width: 25%;
+      margin-bottom: 1rem;
+    }
+    .text-bold {
+      font-weight: 700;
+      a {
+        font-size: 1.9rem;
+        color: #555f77;
+      }
+      .about-role {
+        font-weight: 200;
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+    }
+  }
+}

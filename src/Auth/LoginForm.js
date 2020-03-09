@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input} from "reactstrap";
 import axios from "axios";
 import styled from "styled-components";
 
@@ -8,8 +8,8 @@ const FormContainer = styled.div`
   width: 50%;
   margin: 50px auto;
   padding: 50px 5%;
-  background-color: lightgreen;
-  border: 5px solid green;
+  background-color: forestgreen;
+  border: 5px solid black;
   border-radius: 5px;
 `;
 
